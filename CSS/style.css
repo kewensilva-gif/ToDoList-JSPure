@@ -1,0 +1,167 @@
+.tasks-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 53px;
+    border-radius: 5px;
+    background: var(--bg-shadow);
+    margin-top: 10px;
+}
+
+body{
+    --bg-btn: rgb(24, 153, 153);
+    --bg-primary: hsla(64,83%,54%,0.05);
+    --bg-second: rgb(0,0,0);
+    --bg-tertiary: rgb(9, 68, 102);
+    --bg-white: #fff;
+    --bg-shadow: rgba(0, 0, 0, 0.5);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: repeating-linear-gradient(45deg, var(--bg-primary) 0px, var(--bg-primary) 1px,transparent 1px, transparent 11px,var(--bg-primary) 11px, var(--bg-primary) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, var(--bg-primary) 0px, var(--bg-primary) 1px,transparent 1px, transparent 11px,var(--bg-primary) 11px, var(--bg-primary) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, var(--bg-primary) 0px, var(--bg-primary) 1px,transparent 1px, transparent 11px,var(--bg-primary) 11px, var(--bg-primary) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, var(--bg-primary) 0px, var(--bg-primary) 1px,transparent 1px, transparent 11px,var(--bg-primary) 11px, var(--bg-primary) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, var(--bg-second), var(--bg-tertiary));
+    overflow-y: hidden;
+    position: relative;
+}
+
+.btn-noturno {
+    position: absolute;
+    background: var(--bg-white);
+    width: 60px;
+    height: 25px;
+    top: -10px;
+    right: 50px;
+    border-radius: 15px;
+    border: 2px solid var(--bg-btn);
+    box-shadow: 2px 2px 10px 2px #0d1c2038;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ball-btn-noturno {
+    width: 26px;
+    height: 25.5px;
+    border-radius: 50%;
+    background: var(--bg-btn);
+    
+}
+
+#tasks-container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tasks-header {
+    margin-top: 40px;
+}
+
+#add-task-form {
+    position: relative;
+}
+
+#add-task-form input {
+    box-sizing: border-box;
+    border: 1px solid var(--bg-btn);
+    background: var(--bg-white);
+    color: var(--bg-second);
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#add-task-form input:focus {
+    outline: none;
+}
+
+#add-btn {
+    position: absolute;
+    background: var(--bg-white);
+    border: 1px solid var(--bg-btn);
+    cursor: pointer;
+    transition: .5s;
+    width: 60px;
+    height: 53px;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 5px;
+    border-end-end-radius: 5px;
+    padding-top: 3px;
+}
+
+#add-btn:hover {
+    background-color: var(--bg-btn);
+    color: var(--bg-white);
+    border: 1px solid var(--bg-white);
+}
+
+ion-icon {
+    font-size: 23px;
+}
+
+#task-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#task-list li {
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    background: var(--bg-btn);
+    border-bottom: 3px solid var(--bg-white);
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    transition: .5s;
+    font-weight: bold;
+}
+
+#task-list ion-icon {
+    position: absolute;
+    top:  0;
+    height: 40px;
+    transition: .5s;
+    width: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.done-btn {
+    right: 40px;
+}
+
+.remove-btn {
+    right: 0;
+}
+
+.done-btn:hover {
+    background-color: rgb(9, 223, 144);
+}
+
+.remove-btn:hover {
+    background-color: rgb(190, 54, 54);
+    border-top-right-radius: 5px;
+    border-end-end-radius: 3px;
+}
+
+.hide {
+    display: none;
+}
+
+#task-list li.done {
+    background-color: var(--bg-white);
+    color: var(--bg-second);
+    text-decoration: line-through;
+    border-bottom: 3px solid var(--bg-second);
+}
